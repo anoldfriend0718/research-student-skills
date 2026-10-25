@@ -1,0 +1,48 @@
+﻿域	英文术语	规范中文	缩写或符号	物理意义与单位	何时使用	防混用	依据	教学状态
+系统储能	thermochemical energy storage	热化学储能	TCES	由吸热反应储能、逆向放热反应释能；为过程名称，无固定单位	可逆热化学储能	不等同于sensible/latent heat storage；长时低损失依赖产物分离与储存条件	P16，PDF p2，§1 / Eq.(1)	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	calcium looping	钙循环	CaL	本文CaO/CaCO3循环；原文反应热约178 kJ/mol，仅为该反应体系	CaO–CO2–CaCO3储能与捕集	不能把Ca(OH)2/CaO的反应热或水合/脱水过程混入	P16，PDF p2，§1 / Eq.(1)	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	calciner	煅烧反应器	—	CaCO3吸热分解为CaO与CO2的反应器	P16钙循环充能侧	不等同carbonator；也不能在Ca(OH)2体系中取代dehydrator	P16，PDF p2，§1	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	carbonator	碳酸化反应器	—	CaO与CO2放热反应的反应器；此系统同时承担捕集与放热	P16钙循环释能侧	carbonation不是hydration；carbonator不是hydrator	P16，PDF p2，§1	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	heat exchanger network	换热网络	HEN	多个热流与冷流之间的热集成网络，无固定单位	CaL系统热回收	原文另有heat exchange network；单篇选定一种表达；network不同于单个heat exchanger	P16，PDF p3，§2.1	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	energy storage efficiency	储能效率（本文为电到有用热）	η	P16 Eq.(9)：供热量/总输入电能；无量纲；同时间基准也可用热功率/电功率	P16供热储能系统	不是电到电round-trip efficiency；不能仅凭名称比较百分数	P16，PDF p8，§2.4 / Eq.(9)	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	levelized cost of heat	平准化供热成本	LCOH	折现总成本/折现供热总量；原文RMB/GJth；明确价格基年、寿命和折现率	供热经济性	与LCOE的产出分母和能质不同；不可把RMB/GJth直接当RMB/kWh电	P16，PDF p8，§2.4 / Eq.(10)	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	heat capacity flow rate	热容流率	—	质量流率×定压比热容；SI为W/K	热流/冷流复合曲线、夹点分析	不是heat capacity(J/K)，也不是specific heat capacity[J/(kg·K)]	P16，PDF p8，§3.1	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	energy efficiency	能量效率	—	P33定义：再生电能与有用供热之和/过剩电力与低温余热总输入；无量纲	具有电热多产品的完整充放循环	不能省去外部余热输入；不等同单独电到电效率	P33，PDF p3，Technical assessments	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	exergy efficiency	火用效率	—	考虑能质退化的效率，无量纲；本次正文页只核实功能定义，完整分子分母须查Note S3	电热多联供系统	不是energy efficiency；必须给环境参考态及各输入输出火用口径	P33，PDF p3，Technical assessments	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	round-trip efficiency	往返效率	RTE（本库功能缩写，原文此段未给缩写）	P33用于表征放电回收电能相对于充电电能的比例；无量纲；余热辅助等输入边界另列	Carnot battery电到电储能评价	不能将供热能量算作放电电能；不同系统需比较完整输入边界	P33，PDF p3，Technical assessments	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	levelized cost of electricity	平准化电力成本	LCOE	折现成本/折现电力产出；RMB/kWh或¥/kWh；完整公式须以目标稿定义为准	Carnot battery系统经济性	LCOS与LCOE不得为换词而混用；多产品收益分摊必须声明	P32，PDF p1，Abstract	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	internal rate of return	内部收益率	IRR	使项目净现值为0的折现率；无量纲，常用%	项目盈利能力	不是净利润率或外设discount rate	P33，PDF p3，Technical assessments	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	dynamic payback period	动态投资回收期	DPP	考虑货币时间价值的投资回收时间；year；原文全称见p4、功能定义见p3	P33电价与规模敏感性	不同于不折现的静态回收期；寿命内未回收时不可给有限年数	P33，PDF p4，RESULTS；p3 Technical assessments	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	Pareto frontier	Pareto前沿	—	多目标非支配解集合；各轴保留原指标单位	往返效率–LCOE权衡	不代表唯一最优点；选折中点须给权重/决策规则	P33，PDF p3，Optimization method	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	logarithmic mean temperature difference	对数平均温差	LMTD / ΔTlm	由两端温差计算的对数平均值；K	换热器面积与热负荷计算	非算术平均温差；流型修正、温差端点需明确	P32，PDF p6，Eq.(19)	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	heat duty	换热负荷	QHEX（P32）	单位时间传热量；W或kW；须按具体关联式单位	换热器设计	不是热量J；P32成本式不同设备输入单位也不一致，不能机械复制数值	P32，PDF p6，Eq.(19)	公开论文术语释义；不是默认模型参数或新研究结论
+系统储能	overall heat transfer coefficient	总传热系数	U	按给定面积和总驱动温差定义；W/(m²·K)	P32换热器设计	不同于导热系数W/(m·K)或单侧对流传热系数；面积基准必须相同	P32，PDF p6，Eq.(19)	公开论文术语释义；不是默认模型参数或新研究结论
+车辆热管理	pressure drop	压降	Δp	两个约定截面压力之差；Pa；总压/静压、正负方向须给出	散热器、风道、风机系统	不等同某截面的负表压数值；-1509到-2680 Pa不能直接称压力升高	P28，PDF p4，Eq.(9)	公开论文术语释义；不是默认模型参数或新研究结论
+车辆热管理	airflow non-uniformity	气流不均匀度	i（P28）	迎风截面速度标准差/平均速度；无量纲	P28散热器入口流场	不是均匀性系数；需说明采样、面积权重与平均速度定义	P28，PDF p5，Eq.(13)–(14)	公开论文术语释义；不是默认模型参数或新研究结论
+车辆热管理	Fanning friction factor	Fanning摩擦因子	f	无量纲；P28 Eq.(9) Δp=2fLρv²/De	散热器阻力关联式	Darcy摩擦因子为该约定的4倍；必须和公式配套	P28，PDF p4，Eq.(8)–(9)	公开论文术语释义；不是默认模型参数或新研究结论
+车辆热管理	multi-reference frame model	多参考系模型	MRF	静止与旋转参考系耦合的风机稳态近似；原文展开为multi-reference frame	P28风机CFD	不等同sliding mesh model，也不能据此声明捕捉叶片瞬态相位变化	P28，PDF p6，§2.4.2	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	close-contact melting	接触熔化	CCM	载荷或自重使熔体及时排出并维持薄液膜的熔化过程	相变热管理	CCM在燃料电池稿是catalyst-coated membrane；跨领域先展开	P35，PDF p2，§1	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	composite phase change material	复合相变材料	CPCM	本研究为含GNP填料的相变复合物；无固定单位	P35相变热管理	不是纯PCM；loading须说明质量分数wt%或体积分数	P35，PDF p1，Abstract / Keywords	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	graphene nanoplatelet	石墨烯纳米片	GNP	本文所用碳基纳米填料；加载量以wt%给出	P35复合PCM	不可未经材料表征就改称graphene oxide或graphite	P35，PDF p1，Abstract	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	thermal conductivity	导热系数	λ或k（按稿固定）	热流密度与温度梯度之间的系数；W/(m·K)	导热及复合PCM物性	不要照抄heat conductivity coefficient作为首选；不是heat-transfer coefficient	P35，PDF p4，Table 1	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	dynamic viscosity	动力黏度	μ	剪应力/剪切速率；Pa·s；原物性表可能采用mPa·s，须换算	熔体流变与排液	不是运动黏度m²/s；非牛顿流体依赖剪切速率，不能总用单一常数	P35，PDF p4，Table 1；p6 Eq.(4)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	liquid film thickness	液膜厚度	δ	固液相界面与热源表面之间的薄膜厚度；m，结果常用μm	CCM液膜	测量、由热阻反推、分析模型预测、数值求解必须标清，不能统称独立测量	P35，PDF p5，§3.1 / Fig.4	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	area-normalized thermal resistance	面积归一化热阻	Rth（源文简称thermal resistance）	P34 Eq.(5)：(TSS−Tm)/q；SI为K·m²/W，原文常用K·cm²/W；1 K·cm²/W=10⁻⁴ K·m²/W	CCM热源到熔化界面	与总热阻ΔT/Q[K/W]不同；本库英文为依据量纲补足的规范描述，非声称原文使用该全称	P34，PDF p6，Eq.(5)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	effective heat transfer coefficient	有效传热系数（本文定义）	heff	P34 Eq.(2)：Q/[A(TSS−Ti)]；W/(m²·K)，Ti为初始温度	P34 CCM综合性能指标	该温差不是TSS−Tm，因此不能直接认为heff=1/Rth；effective为对符号heff的说明	P34，PDF p6，Eq.(2)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	steady-state temperature superheat	稳态过热度	TSS−Tm（本库明确）	稳态热源温度超出熔点的差；K或°C温差；须与温度本身分开	CCM温控比较	过热度减少72.4%不等于摄氏温度降低72.4%；先定义基准	P34，PDF p16，Conclusion (1)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	heat flux	热流密度	q或q″（按稿固定）	单位面积热功率；W/m²；1 W/cm²=10⁴ W/m²	CCM定热流边界	与热功率W、热量J、体积热源W/m³分别命名	P34，PDF p4，§2.1	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	latent heat	相变潜热（比潜热）	L	单位质量相变焓变；J/kg，原表kJ/kg	PCM物性	不要把总潜热J与比潜热J/kg混写	P35，PDF p4，Table 1	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	shear rate	剪切速率	γ̇	分析模型中∂ur/∂z；s⁻¹；完整三维模型需用应变率不变量定义	P35 Sisko流变	不是剪应力Pa；一维导数定义不自动通用于任意三维流	P35，PDF p6，Eq.(4)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	flow index	流动指数	n	Sisko本构幂指数；无量纲；n<1对应相应剪切变稀行为	P35 Sisko本构	不能仅凭n比较不同剪切速率下的绝对黏度	P35，PDF p6，Eq.(4)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	consistency coefficient	稠度系数	m	由τ=mγ̇ⁿ+bγ̇作量纲推导：Pa·sⁿ；原文只给名称，单位为本次推导	P35 Sisko本构	不是Pa·s常数黏度；n改变时单位也随之改变	P35，PDF p6，Eq.(4)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	infinite-shear viscosity	无限剪切速率黏度	b	Sisko模型高剪切极限黏度；Pa·s；本库补足连字符与rate语义	P35高剪切液膜	与零剪切黏度不同；避免将高剪切近似无限外推	P35，PDF p6，Eq.(4)	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	reduced Reynolds number	约化Reynolds数	Re*	按原文尺度：Re*=ρUδ²/(μR)=Reδ/R；无量纲	薄膜润滑近似惯性/黏性比较	不是仅Re≪1；非牛顿黏度选取与局部尺度要另说明	P35，PDF p6，§3.1 / Eq.(3)后	公开论文术语释义；不是默认模型参数或新研究结论
+相变与流变	melted fraction	已熔化比例	fl	P34以熔化位移ΔH/H0表征；无量纲；依赖该实验几何及位移映射	P34轴向位移处理	不能不经体积/密度说明就等同三维局部liquid fraction θ(T)	P34，PDF p5，§2.1	公开论文术语释义；不是默认模型参数或新研究结论
+多孔催化层：匿名教学构造	image-constrained reconstruction	图像约束重构	—	用可观测的空间特征限制几何重构的候选结果；需要说明图像实际分辨了什么。	成像与随机几何建模	图像约束不等于逐颗粒成像真实值；应分别描述直接观测与模型生成。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	sub-resolution particle	亚分辨率颗粒	—	低于指定成像方法当前分辨能力的颗粒；尺度单位m或nm。	多尺度材料结构模型	必须说明相对于哪种成像分辨率；不能宣称已直接识别每个颗粒。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	catalyst-coated membrane	催化剂涂覆膜	CCM	燃料电池组件名称。	燃料电池术语表	与close-contact melting同缩写；跨领域必须重新展开。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	pore-facing interfacial area	孔隙侧界面面积	A（示例）	指定固体相直接邻接可分辨孔隙的界面面积；m²；先声明统计域与面元规则。	催化层等多孔反应介质的几何统计	几何面积不自动等于电化学活性面积；统计域和分辨率改变也可能改变面积。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	mass-specific interfacial area	质量比界面面积	S（示例）	指定界面面积/明确约定的材料质量；m²/kg或m²/g。	不同载量材料的几何比较	归一化分母用全部材料质量还是可达部分质量，须预先固定。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	area-weighted mean concentration	面积加权平均浓度	—	各界面浓度按其面积加权；有量纲浓度用mol/m³，若先按参考值归一化则均值无量纲。	连接局部反应物供应与界面反应	不同于体积平均或颗粒数量平均；先说是否已归一化。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	spatially integrated consumption rate	空间积分消耗速率	—	对指定区域的反应通量作面积积分得到的总消耗速率；例如mol/s。	局部反应–输运模型的总体响应	总体仅相对于已定义的积分域；不自动代表整电池电流、功率或完整性能。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论
+多孔催化层：匿名教学构造	reference-normalized consumption rate	按参考浓度归一化的消耗速率	K（教学示例）	若将mol/s除以mol/m³，结果为m³/s，仍有量纲。	比较相同反应条件下区域的反应响应	归一化不一定无量纲；必须写明分母、积分域、反应边界与供给方向。	教学构造：通用概念释义，非公开SCI实证条目	示例定义，须按自己的数据/模型重建；不附未发表材料或结论

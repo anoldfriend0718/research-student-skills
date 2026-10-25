@@ -1,5 +1,5 @@
 {
-  "bundle_version": "0.1.0",
+  "bundle_version": "0.2.0",
   "bundled_dependencies": {
     "nature-downloader": [
       "web-access"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manuscript Revision Diff"
+  short_description: "Compare academic manuscript revisions in English-only HTML"
+  default_prompt: "Use $manuscript-revision-diff to compare my selected baseline and current manuscript in a side-by-side HTML."

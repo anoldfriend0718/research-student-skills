@@ -1,0 +1,4 @@
+interface:
+  display_name: "CNKI PDF Downloader"
+  short_description: "Download CNKI PDFs through a live browser session"
+  default_prompt: "Use $cnki-live-session-pdf-downloader to download CNKI PDFs from an authenticated Edge session and update the queue audit files."

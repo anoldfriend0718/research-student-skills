@@ -1,0 +1,33 @@
+{
+  "bundle_version": "0.1.0",
+  "bundled_dependencies": {
+    "nature-downloader": [
+      "web-access"
+    ],
+    "researchwiki-steward": [
+      "word-to-markdown-academic"
+    ]
+  },
+  "upstreams": {
+    "web-access": {
+      "repository": "https://github.com/eze-is/web-access",
+      "commit": "d173a75978ceb2c63fa0b27f7408cd2bf7fe4310",
+      "version": "2.6.0",
+      "license": "MIT (SKILL.md declaration)"
+    },
+    "nature-downloader": {
+      "license": "MIT",
+      "copyright_holder": "baihe26",
+      "license_file": "skills/nature-downloader/LICENSE"
+    }
+  },
+  "external_software": {
+    "Python": "3.11+",
+    "Node.js": "22+",
+    "Pandoc": "PATH or pypandoc_binary",
+    "MarkItDown": "optional DOCX text comparator",
+    "LibreOffice": "optional legacy vector conversion",
+    "BrowserAct": "optional form browser provider",
+    "selenium and websocket-client": "publisher live-session fetcher"
+  }
+}

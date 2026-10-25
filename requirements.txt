@@ -1,0 +1,7 @@
+Pillow>=10.0
+pypandoc_binary>=1.13
+markitdown[docx]>=0.1
+pdfplumber>=0.11.0
+pypdf>=4.0.0
+PyYAML>=6.0.0
+jsonschema>=4.0.0

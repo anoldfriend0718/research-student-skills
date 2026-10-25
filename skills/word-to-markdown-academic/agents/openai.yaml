@@ -1,0 +1,4 @@
+interface:
+  display_name: "Word to Academic Markdown"
+  short_description: "Clean academic DOCX to Markdown with figure/table layout recovery"
+  default_prompt: "Use $word-to-markdown-academic to convert this Word manuscript into a clean Markdown working copy, preserving formulas, captions, tables, and multi-panel figure layouts."

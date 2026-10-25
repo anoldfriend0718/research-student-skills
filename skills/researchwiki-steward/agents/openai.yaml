@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研知识库消纳"
+  short_description: "将研究材料消纳为有来源的证据、知识连接与项目综述"
+  default_prompt: "使用 $researchwiki-steward 将本次材料消纳到我指定的 Obsidian 知识库，保留来源、证据条件和结论边界，不改原始资料。"

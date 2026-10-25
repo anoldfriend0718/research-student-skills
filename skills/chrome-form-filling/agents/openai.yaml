@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chrome 网页填报"
+  short_description: "根据资料在 Chrome 填报网页，处理日期与分页并核验暂存结果"
+  default_prompt: "使用 $chrome-form-filling，根据我提供的资料，在已打开的 Chrome 填报页面完成指定栏目并暂存核验。"

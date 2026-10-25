@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Handoff"
+  short_description: "Create, update, and resume Codex task handoffs"
+  default_prompt: "Use $codex-handoff to create, update, or read a concise Codex task handoff."

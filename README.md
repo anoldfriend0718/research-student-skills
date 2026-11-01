@@ -2,7 +2,7 @@
 
 把论文写作、文献下载与知识消纳、文档转换、修订对比、网页填报和任务交接中反复使用的流程整理为可复用的 Agent Skills。面向使用 Codex、Claude Code 或其他支持 `SKILL.md` 工具的学生，从当前任务选择所需技能即可。
 
-当前仓库版本为 **v0.2.0**，包含 **9 个主要技能和 1 个第三方配套组件，共 10 个目录**。各技能的版本与适用范围分别维护；工程论文写作目前为 v0.1.0 学生试用版。
+当前仓库版本为 **v0.3.0**，包含 **10 个主要技能和 1 个第三方配套组件，共 11 个目录**。各技能的版本与适用范围分别维护；工程论文写作目前为 v0.1.0 学生试用版。
 
 本仓库包含维护者的工作流与适配，也随包提供实际需要的第三方组件；第三方内容保留原署名和许可，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。`nature` 是现有技能名称的前缀，不表示与 Nature Portfolio 存在隶属关系，也不保证发表或下载权限。
 
@@ -19,6 +19,7 @@
 | 知识库消纳 | [researchwiki-steward](skills/researchwiki-steward/SKILL.md) | 将材料整理为有来源的证据卡、知识连接、项目综述与写作证据 |
 | 网页资料填报 | [chrome-form-filling](skills/chrome-form-filling/SKILL.md) | 根据有来源的材料填写表单，暂存后刷新核对 |
 | 任务交接 | [codex-handoff](skills/codex-handoff/SKILL.md) | 保存当前目标、文件状态、已验证结果和后续任务，便于继续工作 |
+| Linux/CentOS部署 | [linux-codex-setup](skills/linux-codex-setup/SKILL.md) | 安装Codex、按需独立联网与后台运行，分别验收模型和普通工具执行 |
 | 第三方配套 | [web-access](skills/web-access/UPSTREAM.md) | 为机构全文下载提供本地浏览器 CDP 组件，保留上游来源与版本 |
 
 本仓库不收录本机安装的所有技能，也不包含浏览器用户目录、登录会话、个人论文、API key 或历史申报明细。`literature-fulltext-fetcher` 统一路由器依赖未随包发布的检索和全文阅读技能，暂不收录；请直接选择上表中的下载入口。
@@ -40,6 +41,7 @@ python install.py --agent codex --only xuqh-engineering-paper-writing
 python install.py --agent codex --only word-to-markdown-academic manuscript-revision-diff
 python install.py --agent codex --only nature-downloader
 python install.py --agent codex --only researchwiki-steward
+python install.py --agent codex --only linux-codex-setup
 ```
 
 其他技能同样使用 `--only 技能名` 选择；需要全部安装时，执行 `python install.py --agent codex --dry-run`，确认后去掉 `--dry-run`。安装 `nature-downloader` 自动携带 `web-access`；安装 `researchwiki-steward` 自动携带 `word-to-markdown-academic`。
@@ -66,6 +68,8 @@ python check_environment.py
 
 安装完成后重新载入 Agent 的技能列表。可以按任务自然描述，也可显式使用 `$技能名`。
 
+Linux部署技能还提供[独立ZIP包](packages/linux-codex-setup-v0.1.0.zip)和[SHA256校验值](packages/SHA256SUMS.txt)。解压安装方法及目标服务器的依赖边界见[技能说明](skills/linux-codex-setup/README.md)。
+
 ## 调用示例
 
 提供当前材料、希望获得的产物和允许修改的范围。先完成一个小任务并核对输出，再扩大到整篇论文、批量下载或完整表单。
@@ -81,6 +85,7 @@ python check_environment.py
 | 处理出版商队列 | 用 `$sciencedirect-live-session-fetcher` 根据 input.csv 下载文献，使用我已授权的浏览器会话，先测试一篇并检查结果记录。 |
 | 消纳阅读材料 | 用 `$researchwiki-steward` 将这篇论文消纳到我指定的知识库，先检查已有笔记，再整理有来源的证据、术语、知识连接和项目综述。 |
 | 填写网页资料 | 用 `$chrome-form-filling` 根据这些材料填写当前网页，只暂存；完成后刷新核对。 |
+| 部署服务器Codex | 用 `$linux-codex-setup` 在我的CentOS服务器安装Codex，先检查系统和权限，再验证模型调用和普通工具执行；仅在需要时配置独立网络。 |
 | 保存任务进度 | 用 `$codex-handoff` 整理本地交接文件，记录已完成内容、文件位置、验证结果和下一步。 |
 
 `web-access` 随机构下载路线使用，通常无需单独调用。写作任务需要文献、复杂 Word 或知识库时，可选用对应配套技能；局部文字修订无需完整重跑流程。写作的更多入口见[学生使用说明](skills/xuqh-engineering-paper-writing/README.md)。
@@ -98,6 +103,7 @@ python check_environment.py
 | 知识库消纳 | `researchwiki-steward` 是个人 `xuqh-researchwiki-steward` 的通用版，随包提供基本卡片模板，不依赖教师私有 vault 的注册表或内部脚本。全文阅读和独立审查能力按实际环境选择，未完成的审查须标明。 |
 | 网页填报 | 需要当前 Agent 可用的浏览器控制工具；BrowserAct 是可选实现，未随包提供。北理工参考文件仅保留技术案例，不含个人业绩，也不替代学校现行规则。 |
 | 任务交接 | 写本地交接文件可独立使用；跨聊天操作需要 Codex 应用实际提供对应工具，其他 Agent 不保证支持。 |
+| Linux Codex部署 | 需要获准的SSH入口和账号认证；探测脚本需目标Linux已有Python3.6+，缺少时可用shell。旧内核兼容性、网络出口及管理员操作必须按目标机实测；不默认安装桌面或代理。 |
 | Web Access | 为下载提供浏览器连接能力，不提供机构授权；上游版本及打包适配见[来源说明](skills/web-access/UPSTREAM.md)。 |
 
 登录、验证码和机构授权由使用者在自己的浏览器完成。输出以实际文件头、来源及保存后回查结果为准。网页结构、出版商权限和浏览器版本变化可能影响路线。

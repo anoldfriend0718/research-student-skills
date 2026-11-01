@@ -1,0 +1,4 @@
+interface:
+  display_name: "Linux Codex部署与排障"
+  short_description: "配置Linux服务器Codex、独立联网与后台运行，按需接入Dot并验证调用"
+  default_prompt: "使用 $linux-codex-setup 检查目标CentOS或其他Linux服务器，复用已有配置，完成Codex部署或排障，分别验证模型调用和普通工具执行；按需验证独立运行，需要Dot接入时再处理设备授权。"

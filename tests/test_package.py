@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class PublicationTests(unittest.TestCase):
     def test_runtime_inventory_and_links(self):
         skills = sorted((ROOT / "skills").iterdir())
-        self.assertEqual(len(skills), 10)
+        self.assertEqual(len(skills), 11)
         for skill in skills:
             entry = skill / "SKILL.md"
             text = entry.read_text(encoding="utf-8")

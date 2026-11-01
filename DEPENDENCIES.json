@@ -1,5 +1,5 @@
 {
-  "bundle_version": "0.2.0",
+  "bundle_version": "0.3.0",
   "bundled_dependencies": {
     "nature-downloader": [
       "web-access"
@@ -28,6 +28,7 @@
     "MarkItDown": "optional DOCX text comparator",
     "LibreOffice": "optional legacy vector conversion",
     "BrowserAct": "optional form browser provider",
-    "selenium and websocket-client": "publisher live-session fetcher"
+    "selenium and websocket-client": "publisher live-session fetcher",
+    "linux-codex-setup": "Authorized SSH client; target Linux Python 3.6+ only for optional probe; shell fallback; Codex and bubblewrap chosen for target version"
   }
 }

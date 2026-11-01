@@ -1,10 +1,26 @@
 # 学生科研常用 Skills
 
-把论文写作、文献下载与知识消纳、文档转换、修订对比、网页填报和任务交接中反复使用的流程整理为可复用的 Agent Skills。面向使用 Codex、Claude Code 或其他支持 `SKILL.md` 工具的学生，从当前任务选择所需技能即可。
+把论文写作、文献下载与知识消纳、文档转换、修订对比、网页填报、任务交接和科研服务器环境部署中反复使用的流程整理为可复用的 Agent Skills。面向使用 Codex、Claude Code 或其他支持 `SKILL.md` 工具的学生与科研人员，从当前任务选择所需技能即可。
 
 当前仓库版本为 **v0.3.0**，包含 **10 个主要技能和 1 个第三方配套组件，共 11 个目录**。各技能的版本与适用范围分别维护；工程论文写作目前为 v0.1.0 学生试用版。
 
 本仓库包含维护者的工作流与适配，也随包提供实际需要的第三方组件；第三方内容保留原署名和许可，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。`nature` 是现有技能名称的前缀，不表示与 Nature Portfolio 存在隶属关系，也不保证发表或下载权限。
+
+## v0.3.0 新增：Linux / CentOS 部署 Codex
+
+2026-11-01加入 **[linux-codex-setup](skills/linux-codex-setup/README.md) v0.1.0**，适用于新服务器首次部署、已有安装排障，以及需要断开本机后继续运行的场景。
+
+- **先检查环境：** 核验SSH目标、发行版、架构、内核、glibc和权限；没有Python时也能用基础shell检查。
+- **按需安装和配置：** 用户级安装、无头登录、服务器网络出口与后台会话；需要Dot接入时再处理桌面和设备授权。
+- **分别验收：** 记录真实模型回复、普通工具执行和只读保护结果，保留回退办法。
+
+**[下载独立ZIP包](https://github.com/anoldfriend0718/research-student-skills/raw/refs/heads/main/packages/linux-codex-setup-v0.1.0.zip)** · [安装与使用说明](skills/linux-codex-setup/README.md) · [新CentOS部署流程](skills/linux-codex-setup/references/new-centos.md) · [SHA256校验值](packages/SHA256SUMS.txt)
+
+安装技能后，可以这样提出任务：
+
+> 使用 $linux-codex-setup，在SSH别名 my-centos 指向的服务器安装Codex。先检查系统和已有配置，再验证模型调用与普通工具执行；我需要断开本机后继续运行。
+
+技能提供部署流程，不提供账号或网络出口，也不保证所有旧CentOS版本兼容。现有CentOS8经验已匿名化，实际兼容性仍须在目标机器验证。
 
 ## 技能清单
 
@@ -26,7 +42,7 @@
 
 ## 选择与安装
 
-先安装 Git、Python 3.11+。需要浏览器文献下载路线时，再按技能说明准备 Node.js 22+、浏览器及自己的合法访问权限。
+使用仓库安装器时，在安装技能的客户端准备 Git、Python 3.11+。需要浏览器文献下载路线时，再按技能说明准备 Node.js 22+、浏览器及自己的合法访问权限。仅使用Linux部署技能的独立ZIP时，可按其说明手动放入技能目录，无需运行本仓库安装器；客户端安装器的Python要求不等于目标CentOS服务器的要求。
 
 ```text
 git clone https://github.com/anoldfriend0718/research-student-skills.git
@@ -67,8 +83,6 @@ python check_environment.py
 纯文本写作建议和本地交接文件通常无需上述文档处理依赖。Pandoc 可由 `pypandoc_binary` 提供；如不在 PATH，可使用技能内的 `scripts/pandoc_cli.py`。旧 WMF/EMF 图像转换可选用 LibreOffice；扫描文档还需另配 OCR。其他第三方软件通过官方渠道安装，不复制整个软件或环境目录。
 
 安装完成后重新载入 Agent 的技能列表。可以按任务自然描述，也可显式使用 `$技能名`。
-
-Linux部署技能还提供[独立ZIP包](packages/linux-codex-setup-v0.1.0.zip)和[SHA256校验值](packages/SHA256SUMS.txt)。解压安装方法及目标服务器的依赖边界见[技能说明](skills/linux-codex-setup/README.md)。
 
 ## 调用示例
 
@@ -126,6 +140,7 @@ python -m unittest discover -s skills/manuscript-revision-diff/scripts -p test_e
 | 检查范围 | 已检查内容与适用限制 |
 |---|---|
 | 仓库打包与安装 | 6 项包检查通过，覆盖目录与链接、敏感路径模式、Python 语法、安装依赖与不覆盖行为、填报快照比较、第三方来源记录。它们不等于学生电脑兼容性或在线业务路线验证。 |
+| Linux部署技能发布 | 已验证独立ZIP完整性、包内文件与提交源码一致，以及临时目录中的安装和重复安装保护。匿名CentOS8案例包含模型调用、普通工具执行和只读保护实测；未完成所有CentOS版本的兼容矩阵或整机重启测试。 |
 | 写作内容与文本试跑 | 已进行独立内容审核、结构与链接检查；3 个文本场景有限试跑，分别涉及熟手指定两句合并、回复与给定正文一致、新手依据三图组织候选主线。不能据此推定整篇写作或完整返修流程均已验证。 |
 | Word 转换试跑 | 实际任务中检查了原 DOCX 保护、媒体与链接、表格及部分公式/符号；复杂对象语义、活动引文域迁移和逐页视觉尚未全面验证。 |
 | 下载、填报与知识库任务 | 离线检查不能证明每所学校、每个出版商或当前页面均可用；每次仍需核对权限、代表性输入、保存后的文件或页面，以及实际引用的来源。 |
